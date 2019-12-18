@@ -1,0 +1,182 @@
+.val_index_page {
+  float: left;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  margin-bottom: 40px;
+
+  .banner_index {
+    height: 700px;
+    background-image: url('/assets/banner.jpg');
+
+    .banner_sec {
+      padding: 120px 0 30px;
+      text-align: center;
+      background: 0 0;
+      float: left;
+      width: 100%;
+
+      h1 {
+        font-size: 50px;
+        line-height: 90px;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .intro p {
+        font-size: 28px;
+        text-align: justify;
+        font-family: "Blippo";
+        margin-bottom: 50px;
+        font-style: italic;
+        color: #fff;
+      }
+      .our_leadership {
+        color: white;
+        font-size: 45px;
+        border-bottom: 3px solid #6bcbd5;
+        font-family: "Blippo";
+        font-style: italic;
+      }
+    }
+
+
+    .manag-board {
+      width: 100%;
+      float: left;
+      //margin-top: 30px;
+
+      .card {
+        border: 1px solid #6bcbd5;
+        height: 500px;
+        margin-bottom: 50px;
+        position: relative;
+        background-color: #f8f9fa;
+        // float: left; //is wrong  dont enabled
+        border-radius: 15px;
+        padding: 0;
+
+        ul {
+          list-style: none;
+          padding: 0%;
+          margin: 0;
+          float: left;
+          width: 100%;
+
+          li {
+            margin: 0 0 40px 0;
+            padding: 0 15px;
+            float: left;
+            width: 100%;
+
+            &.profile {
+              background-color: #0ca3b3;
+              padding-top: 12px;
+              height: 100px;
+              border-radius: 13px 13px 0px 0px;;
+            }
+
+            &.descs {
+              margin: 0 0 20px 0;
+              color: black;
+              text-align: justify;
+              font-family: "Operator Mono SSm A,Operator Mono SSm B,Consolas,monospace";
+              font-style: italic;
+              font-size: 18px;
+              min-height: 275px;
+            }
+
+
+            .profile-pic {
+              float: left;
+              width: 107px;
+              height: 107px;
+              border-radius: 107px;
+              background-color: #f1f1f1;
+              text-align: center;
+              overflow: hidden;
+              margin: 0 20px 0 0;
+            }
+
+            .valign {
+              display: table-cell;
+              vertical-align: middle;
+
+              h4 {
+                color: white;
+                font-size: 20px;
+                line-height: 34.16px;
+                margin: 0;
+                text-transform: uppercase;
+
+              }
+
+              h5 {
+                color: white;
+                font-size: 12px;
+                line-height: 20px;
+                margin: 0;
+              }
+            }
+          }
+
+          p {
+            color: black;
+          }
+        }
+      }
+    }
+
+
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .val_index_page {
+    .banner_index {
+      height: 700px;
+      .banner_sec {
+        padding-top: 110px;
+
+        h1 {
+          font-size: 30px;
+          line-height: 45px;
+        }
+        .intro p {
+          font-size: 20px;
+        }
+        .our_leadership {
+          font-size: 35px;
+        }
+
+      }
+      .manag-board {
+        .card {
+          ul {
+            li {
+              margin: 0 0 25px 0;
+
+              &.descs {
+                font-size: 16px;
+              }
+
+              .valign {
+                h4 {
+                  font-size: 14px;
+                }
+
+                h5 {
+                  font-size: 12px;
+                  line-height: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

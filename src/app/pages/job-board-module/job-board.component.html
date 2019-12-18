@@ -1,0 +1,68 @@
+<section class="val_index_page">
+  <div class="banner_index">
+
+    <div class="banner_sec">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <h1>JOB<span style="color:#d11e9b;"> B</span><span style="color:#9493da;">O</span><span
+                style="color:#ffd740;">A</span><span style="color:#41b983;">R</span>
+              <span style="color:rgb(238, 74, 74);;">D</span>
+
+              <span class="development wow fadeIn">
+                <span class="develop_before"></span>Mail your CV at hr@vrdnetwork.com<span class="develop_after"></span>
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="get-support">
+      <div class="container">
+        <div class="row" style="margin-bottom: 15px;padding-left: 18px;" *appShowAuthed>
+          <button class="btn btn-primary" (click)="addJob()">ADD</button>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px;text-align: left;"
+            *ngFor="let item of jobData">
+            <div *appShowAuthed>
+              <a style="position: absolute;cursor: pointer;right: 45px;" (click)="editJob(item)"><i
+                  class="far fa-pen">&#9998;</i></a>
+              <a style="position: absolute;cursor: pointer;right: 25px;" (click)="openDialog(item._id)"><i
+                  class="fa fa-times"></i></a>
+            </div>
+            <div class="job_detail">
+              <ul>
+                <li>
+                  <p class="address"><strong>Title:</strong>{{ item.title}}</p>
+                  <p class="address"><strong>Location:</strong>{{ item.location}}</p>
+                  <p class="address"><strong>Job Type:</strong>{{ item.jobType }}</p>
+                  <p class="address"><strong>Job ID:</strong>{{ item.jobId }}</p>
+                  <p class="desc"><strong>Experience:</strong></p>
+                  <p class="address">{{ item.experience }}</p>
+                  <ul class="requirement">
+                    <li *ngFor="let req of item.requirements">{{ req.requirement }}</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<ng-template #callAPIDialog>
+  <div mat-dialog-content>
+    <h2 matDialogTitle>Are you sure you want to delete</h2>
+  </div>
+  <mat-dialog-actions align="end">
+    <button mat-button matDialogClose="no" mat-button> No</button>
+    <button mat-button matDialogClose="yes" mat-raised-button mat-button>Yes</button>
+  </mat-dialog-actions>
+</ng-template>

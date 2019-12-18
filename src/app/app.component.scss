@@ -1,0 +1,34 @@
+.outer_layout {
+  width: 100%;
+  float: left;
+  position: relative;
+  
+
+  .index_latest_pg {
+    width: 100%;
+    float: left;
+  }
+}
+.right50 {
+  right: 65%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) { }
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 767px) 
+and (orientation : landscape) { /* STYLES GO HERE */
+  .right50 {
+    right: 35%;
+  }
+}
+ // Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { }
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px)  { }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }

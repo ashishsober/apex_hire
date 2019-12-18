@@ -1,0 +1,9 @@
+<div class="outer_layout" [ngClass]="{'right50':right50}">
+  <ngx-header  (right50Event)="right50=$event"></ngx-header>
+  
+  <section class="index_latest_pg">
+    <router-outlet></router-outlet>
+  </section>
+
+  <ngx-footer></ngx-footer>
+</div>

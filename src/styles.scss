@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+@font-face {
+    font-family: "SCSans-Regular";
+    src: url("/assets/fonts/sc-sans-web-regular.eot");
+    src: url("/assets/fonts/sc-sans-web-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/sc-sans-web-regular.woff") format("woff"), url("/assets/fonts/sc-sans-web-regular.ttf") format("truetype"), url("/assets/fonts/sc-sans-web-regular.svg#SC Sans Regular-normal-normal") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SCSans-Bold";
+    src: url("/assets/fonts/sc-sans-web-bold.eot");
+    src: url("/assets/fonts/sc-sans-web-bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/sc-sans-web-bold.woff") format("woff"), url("/assets/fonts/sc-sans-web-bold.ttf") format("truetype"), url("/assets/fonts/sc-sans-web-bold.svg#SC Sans Bold-normal-normal") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SCSans-Light";
+    src: url("/assets/fonts/sc-sans-web-light.eot");
+    src: url("/assets/fonts/sc-sans-web-light.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/sc-sans-web-light.woff") format("woff"), url("/assets/fonts/sc-sans-web-light.ttf") format("truetype"), url("/assets/fonts/sc-sans-web-light.svg#SC Sans Light-normal-normal") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Noto-Sans";
+    src: url("/assets/fonts/NotoSans.eot");
+    src: url("/assets/fonts/NotoSans.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/NotoSans.woff") format("woff"), url("/assets/fonts/NotoSans.ttf") format("truetype"), url("/assets/fonts/NotoSans.svg#Noto-Sans") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "SCSans-web-ultra-thin";
+    src: url("/assets/fonts/sc-sans-web-ultra-thin.eot");
+    src: url("/assets/fonts/sc-sans-web-ultra-thin.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/sc-sans-web-ultra-thin.woff") format("woff"), url("/assets/fonts/sc-sans-web-ultra-thin.ttf") format("truetype"), url("/assets/fonts/sc-sans-web-ultra-thin.svg#SCSans-web-ultra-thin") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+.black-overlay > div { 
+    top: 20% !important;
+}
+button {
+    outline: none !important;
+}
+
+// d-none d-md-block

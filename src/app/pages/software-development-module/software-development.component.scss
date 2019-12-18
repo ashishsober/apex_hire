@@ -1,0 +1,82 @@
+.val_index_page {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  
+    .banner_index {
+      height: 75px;
+      .banner_sec {
+        text-align: center;
+        background: 0 0;
+        float: left;
+        width: 100%;
+          .caro-capt {
+               bottom: inherit;
+           }
+          h1 {
+            font-size: 80px;
+            line-height: 90px;
+            color: #fff;
+            font-weight: 700;
+          }
+
+          .get-info{
+            width: 100%;
+            float: left;
+            margin-top: 50px;
+            padding: 30px 0 61px;
+            background: white;
+            color: black;
+            text-align: left;
+          }
+
+          .icons-display {
+            width: 100%;
+            background: #063b61;
+            float: left;
+            padding: 45px 0;
+            img {
+              padding: 10px;
+              margin: 35px;
+              border: 1px solid #ffffff7a;
+              border-radius: 5px;
+              box-shadow: 0 0 8px 0 #4285f4;
+            }
+          }
+      } 
+    }
+
+    
+
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .val_index_page {
+      .banner_index {
+        background-color: black;
+        .banner_sec{
+          padding-top: 75px;
+            h1 {
+              font-size: 30px;
+              line-height: 45px;
+            }
+            .icons-display {
+              img {
+                padding: 20px;
+              }
+            }
+         }
+       }
+     }
+  }
+
+
+   // Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px)  { }
+
+ 
+  

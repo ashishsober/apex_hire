@@ -1,0 +1,123 @@
+.val_index_page {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+   
+    .banner_index {
+      height: 500px;
+      background-image: url('/assets/banner.jpg');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .banner_sec{
+        padding: 120px 0 30px;
+        text-align: center;
+        background: 0 0;
+        float: left;
+        width: 100%;
+          h1 {
+            font-size: 80px;
+            line-height: 90px;
+            color: #fff;
+            font-weight: 700;
+          }
+       }
+    }
+
+    .get-support {
+      width: 100%;
+      float: left;
+      margin-top: 50px;
+      background: #0075b0;
+      padding: 50px 0 61px;
+      .here-is-how {
+        color:#fff;
+        font-family:"klinic_slabbook", 'Helvetica', 'Arial', 'sans-serif';
+      }
+      .contact_detail {
+          border: 1px solid #fff;
+          border-radius: 15px;
+          float: left;
+          width: 100%;
+          background: #fff;
+          min-height: 100%;
+        ul {
+          padding: 0px;
+          list-style-type: none;
+          li {
+              margin: 0 0 30px;
+              padding: 0 0 0 0px; 
+              p.address{
+                padding: 15px;
+                color: #0075B0;
+                font-size: 24px;
+                margin: 0;
+                //text-transform: uppercase;
+              }
+          }
+         }
+      }
+    }
+    .map {
+      float: left;
+      width: 100%;
+      height: 411px;
+    }
+    
+  }
+
+  @media only screen and (min-width: 320px) and (max-width: 767px) {
+    .val_index_page {
+      .banner_index {
+        
+        .banner_sec{
+            h1 {
+              font-size: 30px;
+              line-height: 45px;
+            }
+         }
+      }
+
+      .get-support {
+        .map {
+          display: none;
+        }
+      }
+    }
+  }
+
+
+   // Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) { 
+  .val_index_page {
+    .banner_index {
+      
+      .banner_sec{
+          h1 {
+            font-size: 60px;
+            line-height: 60px;
+            width: 100%!important;
+            white-space: normal;
+          }
+       }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px)  { 
+  .val_index_page {
+    .banner_index {
+      .banner_sec{
+          h1 {
+            font-size: 60px;
+            line-height: 60px;
+          }
+       }
+    }
+  }
+}
+
+ 
+  

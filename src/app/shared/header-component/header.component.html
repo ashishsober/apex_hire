@@ -1,0 +1,56 @@
+<header class="header_new" role="banner" [ngClass]="{'banner-color':bannerColorToBlack,'positionFixed':positionFixed}">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-3 col-md-2" [ngClass]="{'right50':right50}">
+        <a (click)="navigateTo('')" title="VRD Network">
+            <i class="fa fa-home home"></i>
+            <label class="logo">VRD Network</label>
+        </a>
+      <span class="mob_icon2" (click)="sidebar('open')" *ngIf="!displayBlock"></span>
+      <span class="mob_cross" (click)="sidebar('close')" *ngIf="displayBlock"></span>
+    </div>
+    <div class="col-xs-12 col-lg-9 col-md-10">
+      <ul class="menu_new" [ngClass]="{'display_block':displayBlock}">
+        <li class="only_for_mobile no_arrow" *ngIf="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value">
+            <img class="img-circle" [src]="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value">
+            <a class="user_name">
+              {{ currentUser.displayName }}
+              <h5>{{ currentUser.emails === undefined ? currentUser.emails : currentUser.emails[0].value }}</h5>
+            </a>
+            
+        </li>
+        <li class="menu_arrow"><a (click)="displayCompanyMenu = !displayCompanyMenu" title="Company" class="company_a">About</a>
+          <div class="sub_menu_new srv-list srv-list-for-small-device-about" [ngClass]="{'display_block':displayCompanyMenu}">
+            <ul class="sub-menu-list about_sub">
+              <li (click)="navigateTo('')" class="first" title="About US" class="about-us">
+                <img src="../assets/book-open-solid.svg" />Vrd Network</li>
+              <li (click)="navigateTo('management')" class="first" title="Management" class="management">
+                <img src="../assets/users-solid.svg" />Management</li>
+            </ul>
+          </div>
+        </li>
+        <li class="menu_arrow"><a (click)="displayServiceMenu = !displayServiceMenu" title="Services">Services</a>
+          <div class="sub_menu_new srv-list srv-list-for-small-device-services" [ngClass]="{'display_block':displayServiceMenu}">
+            <ul class="sub-menu-list services">
+              <li (click)="navigateTo('sapSolutions')" class="first" title="SAP Solutions" class="sap-solutions">
+                    <img src="../assets/cubes-solid.svg" />ERP Solutions</li>
+              <li (click)="navigateTo('softwareDevelopment')" class="first" title="Workflow" class="workflow">
+                <img src="../assets/statistics.svg" />Software Development</li>
+              <li (click)="navigateTo('appEngineDevelopment')" class="first" title="App Engine Development" class="app-Engine-Development">
+                <img src="../assets/cloud-solid.svg" />App Engine Development</li>
+              <li (click)="navigateTo('networkSecurity')" class="first" title="Apps Integration" class="apps-integration">
+                <img src="../assets/layer-group-solid.svg" />Network Security</li>
+              <li (click)="navigateTo('iot')" class="first" title="IOT" class="iot">
+                <img src="../assets/ioxhost-brands.svg" />IOT</li>
+            </ul>
+          </div>
+        </li>
+        <li class="no_arrow"><a (click)="navigateTo('careers')" title="Careers" class="careers_a" routerLinkActive="active">Career</a></li>
+        <li class="no_arrow"><a (click)="navigateTo('jobBoard')" title="job_board_a" class="Workflow">Job Board</a></li>
+        <li class="no_arrow"><a (click)="navigateTo('contact')" title="Contact" class="contact_a">Contact</a></li>
+        <li>
+          <ngx-login-btn></ngx-login-btn>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

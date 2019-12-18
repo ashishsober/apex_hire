@@ -1,0 +1,12 @@
+<div class="login-btn-header">
+  <a (click)="googleAuth('Login')" title="Login" class="login_a" *ngIf="!(currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value)">
+    Login
+  </a>
+  <a (click)="googleAuth('logout')" title="Logout" class="login_a logout_for_desktop" *ngIf="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value">
+    Logout
+  </a>
+
+  <div class="logout-user">
+    <img class="img-circle" [src]="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value" *ngIf="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value" (click)="infoModal()">
+  </div>
+</div>

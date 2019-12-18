@@ -1,0 +1,343 @@
+.val_index_page {
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  .banner_index {
+    height: 75px;
+     .banner_sec {
+      text-align: center;
+      background: 0 0;
+      float: left;
+      width: 100%;
+        .company_desc {
+          color: #ffd740;
+          font-size: 38px;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+    
+        .home_contactus {
+          color: #fff;
+          padding: 15px 40px;
+          background-color: #59b400;
+          text-transform: uppercase;
+          margin-top: 50px;
+          font-weight: 700;
+          display: inline-block;
+          border-radius: 50px;
+          text-decoration: none;
+          transition: 0.8s;
+    
+          &:hover {
+            background-color: #f4511e;
+            color: white;
+          }
+        }
+     }
+  }
+
+  .get-info {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+    padding: 30px 0 61px;
+    background: white; //#1a1414;
+    color: black;
+
+    .about {
+      margin-bottom: 25px;
+      font-size: 20px;
+
+      strong {
+        float: left;
+      }
+    }
+
+    .content {
+      line-height: 1.7;
+      font-size: 16px;
+      text-align: justify;
+      letter-spacing: 1.5px;
+      font-family: "SCSans-Light";
+    }
+
+  }
+
+  .when-we-started {
+    background: #6bcbd5;
+    color: black;
+    width: 100%;
+    float: left;
+    padding: 90px 0 61px;
+
+    .heading-when-we {
+      margin-bottom: 25px;
+      font-size: 30px;
+      font-family: 'Noto-Sans';
+      letter-spacing: 0.3rem;
+
+      strong {
+        float: left;
+      }
+    }
+
+    .content-when-we-started {
+      line-height: 1.7;
+      font-size: 16px;
+      text-align: justify;
+      letter-spacing: 1.5px;
+      font-family: "SCSans-Light";
+    }
+
+  }
+}
+
+.developed_project {
+  background: #fff;
+  width: 100%;
+  float: left;
+  padding: 60px 0;
+
+  .bnr-hdr {
+    margin-bottom: 50px;
+    text-align: center;
+    h2 {
+      font-family: SCSans-Regular;
+      letter-spacing: 0.04em;
+    }
+    h3 {
+      font-family: SCSans-Light;
+      letter-spacing: 0.04em;
+    }
+  }
+
+  .amoajon_sec {
+    width: 100%;
+    float: left;
+    border: 1px solid #6c757d;
+    margin: 15px;
+    padding: 0;
+
+    .img_box1 {
+      width: 100%;
+      float: left;
+      border-left: 1px solid #f1f1f1;
+
+      img {
+        width: 338px;
+        height: 238px;
+      }
+    }
+
+    .content_box1 {
+      width: 100% !important;
+      float: left;
+      padding-left: 20px;
+    }
+
+    .content_box2 {
+      min-height: 308px;
+    }
+
+    .content_box {
+      padding: 10px 25px 0 30px;
+      min-height: 375px;
+
+      h4 {
+        width: 100%;
+        float: left;
+        color: #383a3f;
+        font: 400 35px/40px BebasNeueBold;
+        margin: 8px 0 0;
+        text-align: center;
+        font-size: 25px;
+      }
+
+      p {
+        float: left;
+        color: #383a3f;
+        font: 400 18px/32px Lato;
+        text-align: justify;
+      }
+
+      .view {
+        width: 100%;
+        text-align: right;
+        float: left;
+        padding: 10px 15px;
+
+        a {
+          color: #a2a3ae;
+          font: 700 14px/32px Lato;
+          text-align: right;
+          text-transform: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+}
+
+.default-section {
+  background: #247fe1;
+  width: 100%;
+  float: left;
+  padding: 60px 0;
+
+  .text-column {
+    .padd-right-50 {
+      text-align: justify;
+      padding-right: 50px;
+    }
+
+    h2 {
+      letter-spacing: .01em;;
+      font-size: 30px;
+      text-transform: capitalize;
+      color: white;
+      margin-bottom: 25px;
+      text-align: left;
+    }
+
+    .text {
+      color: white;
+    }
+  }
+
+  .no-margin-bottom {
+    margin-bottom: 0px !important;
+
+    .fact-counter {
+      .counter-column {
+        margin-bottom: 70px;
+
+        .count-outer {
+          font-size: 60px;
+          color: white;
+          font-family: 'Lora', serif;
+          margin-bottom: 15px;
+          font-weight: 700;
+          line-height: 60px;
+        }
+
+        .text {
+          font-size: 18px;
+          color: #484848;
+        }
+      }
+    }
+  }
+
+}
+
+.contact-form {
+  background-color: white;
+  width: 100%;
+  float: left;
+  padding: 60px 0;
+  text-align: center;
+  h2 {
+    font-family: SCSans-Regular;
+    margin-bottom: 50px;
+    color: #a2a3ae;
+  }
+}
+
+
+// Mobile screen size
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .val_index_page {
+    .banner_index {
+      background-color: black;
+        .banner_sec {
+          padding-top: 75px;
+          .company_desc {
+            font-size: 25px;
+          }
+        }
+      
+    }
+  }
+
+  .developed_project {
+    .bnr-hdr {
+      h2 {
+        font-size: 25px;
+      }
+      h3 {
+        font-size: 20px;
+        display: none;
+      }
+    }
+    .amoajon_sec {
+      margin: 15px 0 0 0;
+
+      .img_box1 {
+        img {
+          width: 299px;
+          height: 188px;
+        }
+      }
+
+      .content_box {
+        h4 {
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .default-section {
+    .text-column {
+      .padd-right-50 {
+         padding-right:0px ; 
+      }
+    }
+    .no-margin-bottom {
+      padding-top: 50px;
+      text-align: center;
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .developed_project {
+    .amoajon_sec {
+      .img_box1 {
+        img {
+          width: 198px;
+          height: 188px;
+        }
+      }
+
+      .content_box {
+        padding: 7px 15px 0 15px !important;
+
+        h4 {
+          line-height: 32px;
+          font-size: 25px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+  .developed_project {
+    .amoajon_sec {
+      .img_box1 {
+        img {
+          width: 278px;
+          height: 238px;
+        }
+      }
+    }
+  }
+}

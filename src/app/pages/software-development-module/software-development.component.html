@@ -1,0 +1,78 @@
+<section class="val_index_page">   
+        <div class="banner_index">
+            <div class="banner_sec">
+                  <div class="row" style="width:100%;">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0;">
+                                <ol class="carousel-indicators">
+                                        <div *ngFor="let number of slides let i = index">
+                                                <li [ngClass]="{'active' : i == count}"></li>
+                                        </div>     
+                                </ol>
+                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="carousel-item" *ngFor="let image of slides let i = index" [ngClass]="{'active' : i == count}">
+                                            <img class="d-block w-100" [src]="image.img" alt="First slide">
+                                        </div>
+                                    </div>
+                                   <a class="carousel-control-prev" (click)="prev()" role="button" data-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" (click)="next()" role="button" data-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="sr-only">Next</span>
+                                    </a>
+                                  </div>
+                        </div>
+                   </div> 
+    
+                  <div class="get-info">
+                        <div class="container">
+                          <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                  <p style="margin-bottom:40px;text-align: justify;">We have delivered multiple product designs and our product development process 
+                                      focusses on maximizing, cost-effectiveness and manufacturability.We using mature development methods
+                                      having efficient resources of a framework and a flexible delivery model which provides a fully functional
+                                      product.VRD NETWORK creates a best business oriented product with the help of agile developement capability
+                                      and design approach.Keeping updated with the latest technology
+                                    </p>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <h2><strong>WE’LL JUST TAKE CARE OF IT FOR YOU!</strong></h2>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p style="text-align: justify;">Our ability to focus on solutions and look beyond just technologies played an 
+                                    instrumental role in delivering innovative and progressive solutions.We know what 
+                                    it takes to build a product from ideation to conceptualization, to maintenance, 
+                                    we have got you covered. Get started on your next salable online platform now.
+                                    We work as your extended team to complete your project or to enhance your service portfolio 
+                                    in niche as well as popular mainstream technologies.
+                                  </p>
+                              </div>
+                           </div> 
+                         </div>
+                  </div>
+
+                  <section class="icons-display">
+                      <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <h1>Technologies we know so far</h1>
+                                </div>
+                            </div>
+                          <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                                  <div *ngFor="let data of techno_learn" style="display:inline-block;">
+                                        <img src="{{data.img}}" title="{{data.title}}"/>
+                                  </div>
+                               </div>
+                          </div>
+                      </div>
+                  </section>
+              </div>
+        </div>
+</section>

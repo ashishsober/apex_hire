@@ -1,0 +1,145 @@
+.val_index_page {
+    float: left;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  
+    .banner_index {
+        height: 400px;
+        background-image: url('/assets/banner.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .banner_sec{
+          padding: 120px 0 30px;
+          text-align: center;
+          background: 0 0;
+          float: left;
+          width: 100%;
+            h1 {
+              font-size: 80px;
+              line-height: 90px;
+              color: #fff;
+              font-weight: 700;
+                span.development {
+                  margin-top: 5px;
+                  letter-spacing: .5px;
+                  color: #fff;
+                  display: inline-block;
+                  font-size: 20px;
+                  line-height: 20px;
+                  font-weight: 700;
+                  padding: 0 217px;
+                  position: relative;
+                  vertical-align: top;
+                  width: auto;
+                      span.develop_before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        background: url(../../../assets/line.png) no-repeat;
+                        height: 6px;
+                        width: 204px;
+                      }
+                      span.develop_after {
+                        content: "";
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        background: url(../../../assets/line.png) no-repeat;
+                        height: 6px;
+                        width: 204px;
+                      }
+                }
+            }
+        }
+        
+        .get-support {
+          width: 100%;
+          float: left;
+          margin-top: 50px;
+          background: #0075b0;
+          padding: 50px 0 61px;
+          .here-is-how {
+            color:#fff;
+            font-family:"klinic_slabbook", 'Helvetica', 'Arial', 'sans-serif';
+          }
+          .job_detail {
+              border: 1px solid #fff;
+              border-radius: 15px;
+              float: left;
+              width: 100%;
+              background: #fff;
+              min-height: 100%;
+              padding: 30px;
+            ul {
+              margin-top: 15px;
+              padding: 0px;
+              list-style-type: none;
+              li {
+                  margin: 0 0 30px;
+                  padding: 0 0 0 0px; 
+                  p.address{
+                    color: #0075B0;
+                    font-size: 16px;
+                    margin-left: 10px;
+                    margin-bottom: 0px;
+                    text-align: justify;
+                  }
+                  p.desc {
+                    margin-left: 10px;
+                    margin-top: 20px;
+                    margin-bottom: 0px;
+                    text-align: justify;
+                  }
+                  ul.requirement {
+                    list-style-type: initial;
+                    margin-left: 50px;
+                    text-align: justify;
+                    li {
+                      margin: 0;
+                    }
+                  }
+              }
+             }
+          }
+        }
+    }
+ }
+
+
+ @media only screen and (min-width: 320px) and (max-width: 767px) {
+  .val_index_page {
+    .banner_index {
+      .banner_sec{
+          h1 {
+            font-size: 30px;
+            line-height: 45px;
+            span.development {
+              padding: 0 67px;
+              font-size: 15px;
+              line-height: 17px;
+              span.develop_before { 
+                width: 60px;
+              }
+              span.develop_after {
+                width: 60px;
+              }
+            }
+          }
+       }
+      .get-support {
+        .job_detail {
+          padding: 12px;
+          ul li {
+                ul.requirement {
+                  margin-left: 20px;
+                }
+           }
+        }
+       }
+     }
+   }
+}
+  

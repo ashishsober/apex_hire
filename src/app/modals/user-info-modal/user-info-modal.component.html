@@ -1,0 +1,16 @@
+<ul class="sub-menu-list">
+    <li class="user-detail">
+      <div class="icon-img">
+          <img [src]="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value" *ngIf="currentUser.photos === undefined ? currentUser.photos : currentUser.photos[0].value"/>
+      </div>
+      <div class="valign">
+          <h4>{{ currentUser.displayName }}</h4>
+          <h5>{{ currentUser.emails[0].value }}</h5>
+      </div>
+    </li>
+    <li (click)="logout()" class="actionItems">
+        <img src="../assets/sign-out-alt-solid.svg" />Logout
+    </li>
+  </ul>
+
+

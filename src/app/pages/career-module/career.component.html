@@ -1,0 +1,232 @@
+<section class="val_index_page">
+  <div class="cdk-overlay-container"  *ngIf="showSpinner">
+      <div class="cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing"></div>
+      <div class="cdk-global-overlay-wrapper" dir="ltr" style="justify-content: center; align-items: center;">
+        <div id="cdk-overlay-0" class="cdk-overlay-pane" style="max-width: 80vw; pointer-events: auto; width: 874px; height: 316px; position: static;">
+          <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor"></div>
+          <div tabindex="0" class="cdk-visually-hidden cdk-focus-trap-anchor"></div>
+          <div class="spinner-class">
+              <mat-spinner [diameter]="50"></mat-spinner> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner_index">
+         <div class="banner_sec">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <h1><span style="color:#18c5ec;">CAREER</span></h1>
+                  </div>
+                </div>
+              </div>
+          </div> 
+          
+          <div class="container">
+                <form #contactForm="ngForm"  class="form-outer" (ngSubmit)="onSubmit(contactForm,'bd')" novalidate *ngIf="showBasicForm">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <span style="text-align:center"><h2>Basic Information</h2></span>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <mat-form-field> 
+                        <input matInput type="text"
+                              placeholder="First Name" #firstname="ngModel" 
+                              [(ngModel)]="carrerModal.firstname"
+                              name="firstname" required>
+                              <mat-error *ngIf="firstname.hasError('required')">Name is required</mat-error>
+                      </mat-form-field>
+                      
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field> 
+                                    <input matInput type="text"
+                                          placeholder="Last Name" #lastname="ngModel" 
+                                          [(ngModel)]="carrerModal.lastname"
+                                          name="lastname">
+                            </mat-form-field>
+                    </div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <mat-form-field > 
+                            <input matInput type="text" placeholder="Address" 
+                            name="address" #address="ngModel" 
+                            [(ngModel)]="carrerModal.address">
+                          </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <mat-form-field > 
+                                <input matInput type="text" placeholder="City" 
+                                name="city" #city="ngModel" 
+                                [(ngModel)]="carrerModal.city">
+                            </mat-form-field>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <mat-form-field > 
+                                <input matInput type="text" placeholder="State" 
+                                name="state" #state="ngModel" 
+                                [(ngModel)]="carrerModal.state">
+                              </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field > 
+                                    <input matInput type="number" placeholder="Zip Code" 
+                                    name="zipcode" #zipcode="ngModel" 
+                                    [(ngModel)]="carrerModal.zipcode">
+                                </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <mat-form-field> 
+                            <input matInput type="number" 
+                            placeholder="Phone" name="phone_no" 
+                            #phone_no="ngModel" [(ngModel)]="carrerModal.phone_no" 
+                            pattern="^[0-9]+$" min="-9999" max="9999">
+                            <!-- <mat-error *ngIf="phone_no.invalid && (phone_no.dirty || phone_no.touched)">I  invalid dirty and touched</mat-error> -->
+                          </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field> 
+                                    <input matInput type="email" 
+                                            placeholder="Email" 
+                                            name="email" 
+                                            #email="ngModel" 
+                                            [(ngModel)]="carrerModal.email"
+                                            pattern="^[a-zA-Z0-9_%+\-]+([a-zA-Z0-9_%+\.\-]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"  
+                                            required>
+                                            <mat-error *ngIf="email.hasError('required')">Email is required</mat-error>
+                                            <mat-error *ngIf="email.hasError('pattern')">Please enter a valid Email</mat-error>
+                             </mat-form-field>
+                        </div>
+                     </div>
+
+                     <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field > 
+                              <input matInput type="text" placeholder="Current Location" 
+                              name="currentLocation" #currentLocation="ngModel" 
+                              [(ngModel)]="carrerModal.currentLocation">
+                            </mat-form-field>
+                         </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field>
+                                <mat-select placeholder="Gender" name="gender" 
+                                #gender="ngModel" [(ngModel)]="carrerModal.gender">
+                                      <mat-option *ngFor="let data1 of genderboxData" 
+                                                [value]="data1.CODE_VALUE" 
+                                                 >
+                                        {{ data1.CODE_DESC}}
+                                      </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                      </div>
+    
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center request-outer">
+                       <input type="submit" class="send_your_request" value="Continue"/>
+                    </div>
+                  </div>
+                </form>
+
+
+<!-- second form -->
+
+                <form #contactForm="ngForm"  class="form-outer" (ngSubmit)="onSubmit(contactForm,'ad')" novalidate *ngIf="showEducationForm">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <span style="text-align:center"><h2>Industry Experience</h2></span>
+                        </div>
+                    </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <mat-form-field> 
+                        <input matInput type="text"
+                              placeholder="Current Employer Name" #currentEmpName="ngModel" 
+                              [(ngModel)]="carrerModal.currentEmpName"
+                              name="currentEmpName" required>
+                              <mat-error *ngIf="currentEmpName.hasError('required')">Current Employer Name is required</mat-error>
+                      </mat-form-field>
+                      
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field> 
+                                    <input matInput type="text"
+                                          placeholder="Job Title" #jobTitle="ngModel" 
+                                          [(ngModel)]="carrerModal.jobTitle"
+                                          name="jobTitle" required>
+                                          <mat-error *ngIf="currentEmpName.hasError('required')">Job Title is required</mat-error>
+                            </mat-form-field>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <mat-form-field>
+                              <mat-select placeholder="Are you ready to work in Night Shifts?" name="nightShift" 
+                              #nightShift="ngModel" [(ngModel)]="carrerModal.nightShift">
+                                    <mat-option *ngFor="let data1 of nightShiftboxData" 
+                                              [value]="data1.CODE_VALUE" 
+                                               >
+                                      {{ data1.CODE_DESC}}
+                                    </mat-option>
+                              </mat-select>
+                            </mat-form-field>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <mat-form-field> 
+                                      <input matInput type="number"
+                                            placeholder="Total years of Experience" #totalExp="ngModel" 
+                                            [(ngModel)]="carrerModal.totalExp"
+                                            name="totalExp" required>
+                                            <mat-error *ngIf="totalExp.hasError('required')">Job Title is required</mat-error>
+                              </mat-form-field>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <mat-form-field>
+                                  <textarea matInput placeholder="Key Skills" 
+                                        name="keySkills" #keySkills="ngModel" 
+                                        [(ngModel)]="carrerModal.keySkills">
+                                </textarea>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <mat-form-field>
+                                <textarea matInput placeholder="References" 
+                                      name="references" #references="ngModel" 
+                                      [(ngModel)]="carrerModal.references">
+                              </textarea>
+                              </mat-form-field>
+                        </div>
+                      </div>
+    
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center request-outer">
+                        <input type="button" class="back-button" (click)="goBack()" value="Back"/>
+                       
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center request-outer">
+                       <input type="submit" class="send_your_request" value="Submit"/>
+                    </div>
+                  </div>
+                </form>
+
+              <div *ngIf="showSuccessMsg" class="success-msg">
+                  <p>Your Information has been saved Successfully with us.</p>
+              </div>
+
+          </div>
+    </div>
+</section>

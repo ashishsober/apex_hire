@@ -1,0 +1,558 @@
+.header_new {
+  float: left;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all 0.2s ease-in-out;
+
+  &.banner-color {
+    background-color: #212529;
+  }
+
+  a {
+    .home{
+      font-size: 26px;
+      color: wheat;
+    }
+   
+    .logo {
+      margin: 14px 0;
+      // width: 206px;
+      height: 45px;
+      font-size: 25px;
+      color: wheat;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-family: Stencil Std;
+      cursor: pointer;
+    }
+  }
+
+
+  .menu_new {
+    display: block;
+    float: right;
+    margin: 0;
+    transition: all .4s ease-in-out .4s;
+    padding-left: 0px;
+
+    li {
+      transition: none;
+      float: left;
+      margin: 0 0 0 12px;
+      position: relative;
+      //text-transform: uppercase;
+      list-style-type: none;
+      letter-spacing: 1px;
+      font-size: 21px;
+      transition: all 0.2s ease-in-out;
+      font-family: 'Noto-Sans';
+
+      &.only_for_mobile {
+        display: none;
+      }
+
+      &.menu_arrow {
+        a {
+          background: url(../../../assets/ico_arrow_down.svg) right 12px center no-repeat rgba(0, 0, 0, 0);
+          background-size: 11%;
+          color: #ffffffc2;
+          display: inline-block;
+          padding: 20px 38px 20px 12px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 18px;
+        }
+
+        .sub_menu_new {
+          transition: all .25s ease-out;
+          display: none; //keep to block to appear menu all time
+
+          &.srv-list {
+            right: auto;
+            left: 50%;
+            box-shadow: 0 8px 10px 0;
+          }
+
+          ul.sub-menu-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            //border-top: 7px solid #07b8de;
+            z-index: 999;
+            position: absolute;
+            background-color: white;
+            //border-bottom: 5px solid #008000;
+            box-shadow: 0 8px 6px -6px black;
+
+            &.about_sub {
+              width: 230px;
+              right: -30%;
+              height: 133px;
+            }
+
+            &.about_sub:before {
+              left: 98px;
+              top: -12px;
+            }
+
+            &.services {
+              width: 315px;
+              right: -70%;
+              height: 330px;
+            }
+
+            &.services:before {
+              left: 142px;
+              top: -12px;
+            }
+
+            &.recruitment_sub {
+              width: 255px;
+              right: 0%;
+            }
+
+            li {
+              float: none;
+              border-bottom: 1px solid #ddd;
+              margin: 0;
+              background-color: transparent;
+              padding: 13px 0 12px 25px;
+              cursor: pointer;
+              font-family: 'SCSans-Light';
+              font-size: 16px;
+              top: -11px;
+
+              //border-radius: 1px;
+              img {
+                width: 40px;
+                height: 40px;
+                margin-right: 18px;
+                border: 2px solid #11df36;
+                border-radius: 50%;
+                padding: 7px;
+              }
+            }
+
+            li:hover {
+              &.app-Engine-Development {
+                background-color: #ffd740;
+                color: black;
+              }
+
+              &.iot {
+                background-color: #d11e9b;
+              }
+
+              &.apps-integration {
+                background-color: rgb(238, 74, 74);
+              }
+
+              &.sap-solutions {
+                background-color: #41b983;
+              }
+
+              &.workflow {
+                background-color: #9493da;
+              }
+
+              background-color: rgba(0, 0, 0, 0.445);
+              color: white;
+            }
+          }
+
+          ul.sub-menu-list:before {
+            content: "";
+            border-color: transparent white;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 12px solid white;
+            display: block;
+            height: 0;
+            width: 0;
+            //left: 75px;
+            //top: -12px;
+            position: relative;
+          }
+        }
+      }
+
+      &.menu_arrow:hover {
+        a {
+          //transition: all .25s ease-out;
+          // background-color:#008000;
+          color: #fff;
+        }
+
+        .sub_menu_new {
+          //transition: all .25s ease-in;
+          display: block;
+        }
+      }
+
+
+      &.no_arrow {
+        a {
+          background-size: 11%;
+          color: #ffffffc2;
+          display: inline-block;
+          padding: 20px 12px 20px 12px;
+          text-decoration: none;
+          cursor: pointer;
+          font-size: 18px;
+
+          &.contact_a {
+            transition: all 0.2s ease-in-out;
+            background: rgba(0, 0, 0, 0);
+            border: 1px solid #ffffffc2;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            color: #ffffffc2;
+            font-size: 18px;
+            line-height: 36px;
+            margin: 15px 14px;
+            padding: 0 18px;
+            position: relative;
+            z-index: 10;
+            transition: 0.8s;
+
+            &:hover {
+              background-color: #ffd740;
+              border: 1px solid #ffd740;
+              color: black;
+            }
+          }
+        }
+
+        a:hover {
+          transition: all .25s ease-out;
+          //background-color: #07b8de;
+          color: #fff;
+        }
+      }
+
+
+    }
+
+    //closing li
+
+
+    .recruitment_solution_a {
+      background-size: 7% !important;
+    }
+  }
+
+  //closing menu_new
+}
+
+//closing header_new
+
+.right50 {
+  right: 65%;
+}
+
+.positionFixed {
+  position: fixed;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .header_new {
+    .logo {
+      font-size: 28px;
+    }
+
+    .mob_icon2 {
+      background: url(../../../assets/bars-solid.svg) left top rgba(0, 0, 0, 0);
+      background-size: 40%;
+      cursor: pointer;
+      float: right;
+      padding: 20px 38px 20px 12px;
+      text-decoration: none;
+      background-repeat: no-repeat;
+      margin: 20px 0 0;
+    }
+
+    .mob_cross {
+      background: url(../../../assets/times-solid.svg) left top rgba(0, 0, 0, 0);
+      background-size: 40%;
+      cursor: pointer;
+      float: right;
+      padding: 20px 38px 20px 12px;
+      text-decoration: none;
+      background-repeat: no-repeat;
+      margin: 16px 0 0;
+    }
+
+    .display_block {
+      display: block !important;
+    }
+
+    .menu_new {
+      display: none;
+      background-color: #fff;
+      bottom: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 65%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-left: 0px;
+
+      li {
+        float: left;
+        width: 96%;
+
+        &.only_for_mobile {
+          display: block;
+
+          .img-circle {
+            float: left;
+            border-radius: 70px;
+            height: 44px;
+            width: 44px;
+            margin: 10px 0px;
+          }
+
+          .user_name {
+            width: 77%;
+            background-size: 10%;
+            font-size: 15px;
+            padding-top: 12px;
+            padding-right: 6px;
+            padding-left: 8px;
+
+            h5 {
+              font-size: 9px;
+            }
+          }
+        }
+
+        &.menu_arrow,
+        &.no_arrow {
+          .sub_menu_new {
+            //display: none;
+
+            &.srv-list-for-small-device-about {
+              height: 93px;
+              box-shadow: none;
+
+              ul.sub-menu-list {
+                border-bottom: none;
+                border-top: 2px solid black;
+                box-shadow: 0 0px 0px 0px #fff;
+
+                &.about_sub {
+                  width: 100%;
+                  right: 0%;
+                  height: 47px;
+
+                  li {
+                    font-size: 12px;
+                    padding-left: 10px;
+                    top: 0px;
+
+                    img {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.srv-list-for-small-device-services {
+              height: 222px;
+              box-shadow: none;
+
+              ul.sub-menu-list {
+                border-bottom: none;
+                border-top: 2px solid black;
+                box-shadow: 0 0px 0px 0px #fff;
+
+                &.services {
+                  width: 100%;
+                  right: 0%;
+                  height: 222px;
+
+                  li {
+                    font-size: 12px;
+                    padding-left: 10px;
+                    top: 0px;
+
+                    img {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            &.srv-list-for-small-device-recruitment {
+              height: 93px;
+              box-shadow: none;
+
+              ul.sub-menu-list {
+                border-bottom: none;
+                border-top: 2px solid black;
+                box-shadow: 0 0px 0px 0px #fff;
+
+                &.recruitment_sub {
+                  width: 100% !important;
+                  right: 0%;
+
+                  li {
+                    font-size: 12px;
+                    padding-left: 10px;
+
+                    img {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+
+            ul.sub-menu-list:before {
+              display: none;
+            }
+          }
+
+
+          a {
+            color: #000;
+            width: 100%;
+            background-size: 8%;
+            font-size: 14px;
+            padding-bottom: 10px;
+
+            &.contact_a {
+              color: #000;
+              width: 90%;
+              font-size: 10px;
+              text-align: center;
+              margin-left: 0px;
+              background-color: #ffd740;
+              border-color: #ffd740;
+            }
+          }
+        }
+
+        &.menu_arrow:hover {
+          a {
+            background-color: white;
+            color: black;
+          }
+
+          .sub_menu_new {
+            display: none;
+          }
+        }
+      }
+
+      .recruitment_solution_a {
+        background-size: 8% !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px) and (orientation : landscape) {
+
+  /* STYLES GO HERE */
+  .header_new {
+    .menu_new {
+      width: 35%;
+    }
+  }
+
+  .right50 {
+    right: 35%;
+  }
+}
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  .header_new {
+    a {
+      .home {
+        display: none;
+      }
+      
+      .logo {
+        font-size: 12px !important;
+      }
+    }
+    
+
+    .menu_new {
+      li {
+        transition: all 0.2s ease-in-out;
+        font-size: 12px;
+
+        &.menu_arrow {
+          a {
+            font-size: 12px;
+          }
+        }
+
+        &.no_arrow {
+          a {
+            font-size: 12px;
+
+            &.contact_a {
+              transition: all 0.2s ease-in-out;
+              font-size: 9px;
+              line-height: 25px;
+              padding: 0 12px;
+            }
+
+            &.login_a {
+              transition: all 0.2s ease-in-out;
+              font-size: 12px;
+              line-height: 25px;
+              padding: 0 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header_new {
+    .menu_new {
+      li {
+        transition: all 0.2s ease-in-out;
+        font-size: 15px;
+
+        &.menu_arrow {
+          a {
+            font-size: 15px;
+          }
+        }
+
+        &.no_arrow {
+          a {
+            font-size: 15px;
+
+            &.contact_a {
+              transition: all 0.2s ease-in-out;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
