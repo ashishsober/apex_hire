@@ -20,8 +20,8 @@ export class ManagementComponent implements OnInit {
       _id: "5c48155dbd6aa594781c6c75",
       name: "Amrita Gupta",
       position: "Director",
-      discription: "As Chairman & CEO of VRD NETWORK, Under his leadership VRD NETWORK has broadened its offerings while maintaining a culture of strong innovation. His background uniquely prepares him to lead VRD NETWORK towards technological solutions that focus on users.",
-      profileImage: "assets/user-tie-solid.svg",
+      discription: "As Chairman & CEO of APEX HIRE, Under his leadership APEX HIRE has broadened its offerings while maintaining a culture of strong innovation. His background uniquely prepares him to lead APEX HIRE towards technological solutions that focus on users.",
+      profileImage: "assets/amrita_gupta.jpeg",
     },
     {
       _id: "5c485a5f489298b1bc561d79",
