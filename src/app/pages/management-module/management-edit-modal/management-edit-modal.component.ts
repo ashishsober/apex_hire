@@ -20,11 +20,11 @@ export class ManagementEditModalComponent implements OnInit{
     @Inject(MAT_DIALOG_DATA) public data: management) { }
 
   ngOnInit(){
-    if (this.data == null) {
-      this.managementModal = new managementModal('', '', '', 'assets/user-tie-solid.svg', '', '');
-    } else {
-      this.managementModal = new managementModal(this.data.name, this.data.emailid, this.data.position, this.data.profileImage, this.data.discription, this.data._id);
-    }
+    // if (this.data == null) {
+    //   this.managementModal = new managementModal('', '', '', 'assets/user-tie-solid.svg', '', '');
+    // } else {
+    //   this.managementModal = new managementModal(this.data.name, this.data.emailid, this.data.position, this.data.profileImage, this.data.discription, this.data._id);
+    // }
   }
 
   onSubmit({ form, valid }: { form: NgForm, valid: boolean }) {

@@ -26,7 +26,7 @@ export class ManagementComponent implements OnInit {
     {
       _id: "5c485a5f489298b1bc561d79",
       discription: "Oversee , implement and manage the Recruitment process of compamy. Responsible for the planning, design and implementation of cost effective employee benefit programs consistent with the Company’s objectives for employees.",
-      position: "Associate Director -  Delivery, Resource Management",
+      position: "Associate Director",
       profileImage: "assets/user-tie-solid.svg",
       name: "Munmun Goswami",
     }
