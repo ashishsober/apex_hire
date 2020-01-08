@@ -12,58 +12,56 @@ import { JobService } from './jobs.service';
 export class JobBoardComponent implements OnInit {
   @ViewChild('callAPIDialog') callAPIDialog: TemplateRef<any>;
   jobData: job_board[] = [
-    // { _id:"",
-    //   title: 'SAP PP-PI Consultant',
-    //   location: 'Bengaluru',
-    //   jobType: 'Permanent Position',
-    //   jobId: "",
-    //   experience: 'Requires 7+ years’ experience in delivering solutions within the SAP PP-PI module.Able to setup all PP-PI master data',
-    //   requirement: ['7+ years of SAP configuration for PP-PI', 'Experience in setting up Master data for: PPDS, Planning, S&OP, LTP',
-    //     'Chemical Industry experience preferred and a plus', 'Experience in MRP processes and planning, make to order and make to stock scenarios',
-    //     'Knowledge of APO planning (PPDS), Plant maintenance, QM and MM a plus', 'Batch management knowledge required ',
-    //     'Material Forecasting and Demand Management a plus', 'LTP, MPS and SOP a plus', 'Excellent verbal and written communication skills'
-    //   ]
-    // },
-    // {
-    //   _id:"",
-    //   title: 'Syteline Functional Consultant',
-    //   location: 'Bengaluru',
-    //   jobType: 'Permanent Position',
-    //   jobId: "",
-    //   experience: 'We are looking for Syteline functional consultant to join our Syteline team and support us in our existing requirement.4+ years of Syteline Experience is required.',
-    //   requirement: []
-    // },
-    // {
-    //   _id:"",
-    //   title: 'Power BI Consultant',
-    //   location: 'Bengaluru',
-    //   jobType: 'Contract',
-    //   jobId: "",
-    //   experience: 'We are looking for a Power BI Consultant who has good experience to build complex data model in power BI and develop advance report/Cubes in Power BI.',
-    //   requirement: []
-    // },
-    // {
-    //   _id:"",
-    //   title: '.Net Consultant',
-    //   location: 'Bengaluru',
-    //   jobType: 'Permanent Position',
-    //   jobId: "",
-    //   experience: '4+ Years',
-    //   requirement: ['Web applications configurations in cloud and user support for the application', 'Develop reports using SQL Server Reporting Services, Power BI and other reporting tools',
-    //     'Configure and maintain Microsoft Azure PaaS environments', 'Microsoft Azure cloud platform technologies', 'Visual Studio 2013 or later',
-    //     'ASP.NET, C#  and T-SQL.', 'Solid understanding of software testing, continuous integration & continuous delivery', 'Web technologies – HTML, CSS, JS'
-    //   ]
-    // },
-  ]
+    {
+      "_id": "5cf79cda8e0c402597edf71f",
+      "experience": "2+ years",
+      "jobId": "APXMDG001",
+      "jobType": "Permanent",
+      "location": "Philadelphia",
+      "title": "IOT Developers",
+      "requirements": [
+        {
+          "requirement": "Design and Develop Entity Types in SAP MDG "
+        },
+        {
+          "requirement": "Design and Develop Multi-Level Workflows in SAP "
+        },
+        {
+          "requirement": "Configure SAP MDG UI"
+        },
+        {
+          "requirement": "Configure SAP MDG Business Rules Framework Plus (BRF+)"
+        },
+        {
+          "requirement": "Understand SAP Master Data Elements (Customer, Vendor, Material, and Org Structure Elements) "
+        },
+        {
+          "requirement": "Functional skills - SAP MDG Configuration , SAP Business Workflow"
+        },
+        {
+          "requirement": "Should have minimum 1 full SAP MDG roll out experience in MDG"
+        },
+        {
+          "requirement": "Have a good understanding in Material master, Customer master, Supplier master and Financial master"
+        },
+        {
+          "requirement": "Should have experience in integrating MDG with other satellite systems for deployment"
+        },
+        {
+          "requirement": "Excellent Communication Skills"
+        }
+      ]
+    }
+  ];
   jobBoardEditModalComponent: MatDialogRef<JobBoardEditModalComponent>;
   constructor(private dialog: MatDialog,
     private jobService: JobService) { }
 
   ngOnInit() {
-    this.jobService.getJob().subscribe(
-      data => this.jobData = data,
-      err => console.log(err)
-    )
+    // this.jobService.getJob().subscribe(
+    //   data => this.jobData = data,
+    //   err => console.log(err)
+    // )
   }
   addJob() {
     this.jobBoardEditModalComponent = this.dialog.open(JobBoardEditModalComponent, {

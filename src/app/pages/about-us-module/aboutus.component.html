@@ -1,37 +1,38 @@
 <section class="val_index_page">
 
   <div class="banner_index">
-      <div class="banner_sec">
-            <div class="row" style="width:100%;">
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0;">
-                      <ol class="carousel-indicators">
-                              <div *ngFor="let number of slides2 let i = index">
-                                      <li [ngClass]="{'active' : i == count}"></li>
-                              </div>     
-                      </ol>
-                      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                          <div class="carousel-inner" role="listbox">
-                              <div class="carousel-item" *ngFor="let image of slides2 let i = index" [ngClass]="{'active' : i == count}">
-                                  <img class="d-block w-100" [src]="image.img" alt="First slide">
-                                  <div class="carousel-caption d-none d-md-block" style="top: 200px;">
-                                      <h1 class="company_desc">Cost effective IT Solutions worldwide</h1>
-                                      <a class="home_contactus" routerLink="contact"> Contact Us Now </a>
-                                    </div>
-                              </div>
-                          </div>
-                        <a class="carousel-control-prev" (click)="prev()" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                          </a>
-                          <a class="carousel-control-next" (click)="next()" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                          </a>
-                        </div>
+    <div class="banner_sec">
+      <div class="row" style="width:100%;">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding:0;">
+          <ol class="carousel-indicators">
+            <div *ngFor="let number of slides2 let i = index">
+              <li [ngClass]="{'active' : i == count}"></li>
+            </div>
+          </ol>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item" *ngFor="let image of slides2 let i = index"
+                [ngClass]="{'active' : i == count}">
+                <img class="d-block w-100" [src]="image.img" alt="First slide">
+                <div class="carousel-caption d-none d-md-block" style="top: 200px;">
+                  <h1 class="company_desc">Cost effective IT Solutions worldwide</h1>
+                  <a class="home_contactus" routerLink="contact"> Contact Us Now </a>
                 </div>
-              </div> 
-       </div>
-   </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" (click)="prev()" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" (click)="next()" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="get-info">
     <div class="container">
@@ -43,9 +44,22 @@
 
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 content">
+          <h2>We Offer The Best Engineers for Every Project and The Best Projects for Every Engineer</h2>
           <p>
-            It's our mission to place talented technology professionals with reputable 
-            business to drive social progress to all.
+            Finding top engineering talent is a daunting task in the current hyper-competitive marketplace where the
+            best candidates get hired in the blink of an eye. Engineers face their own set of challenges when it comes
+            to finding the optimal project that will ensure they remain on the right track for long-term career success.
+
+            Our recruiters really know the engineering industry, which is one of the main reasons why we're able to
+            attract top prospects for every assignment. These professionals fully trust our team to package their
+            skills, promote their value, and maximize their earning potential on every project. Our staffing team has an
+            in-depth knowledge of the various engineering disciplines that we work in, ensuring that each job is matched
+            with the best possible candidate.
+
+            Apex hire has a strong track record in the engineering staffing industry. We have provided remarkable
+            results to our clients for over 4 years. Our ability to consistently deliver exceptional talent is the
+            reason behind our stellar reputation as a top engineering staffing firm, for clients throughout the U.S
+
           </p>
         </div>
       </div>
@@ -75,100 +89,95 @@
   </div> -->
 </section>
 
-<section class="developed_project">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-xs-12">
-          <div class="bnr-hdr">
-            <h2>Expert Articles Submitted By Consultants</h2>
-            <h3>Work in the Future with the new paradigm of mobile, social and cloud computing</h3>
+<!-- <section class="developed_project">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-xs-12">
+        <div class="bnr-hdr">
+          <h2>Expert Articles Submitted By Consultants</h2>
+          <h3>Work in the Future with the new paradigm of mobile, social and cloud computing</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
+        <div class="amoajon_sec"><a routerLink="softwareDevelopment">
+            <div class="img_box img_box1">
+              <img src="/assets/about_tech.png" alt="Software Development" title="Software Development">
+            </div>
+          </a>
+          <div class="content_box content_box1 content_box2"><a routerLink="softwareDevelopment">
+              <h4> Accessing Google Cloud SQL from Apps Script </h4>
+              <p> Accessing Google Cloud SQL from Apps Script posted Feb 12, 2014, 11:59 PM by Bipin Sasi Connection to
+                Google Cloud SQL instance From Google Apps Script : Google Apps Script has the ability ...</p>
+            </a>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
-          <div class="amoajon_sec"><a routerLink="softwareDevelopment">
-              <div class="img_box img_box1">
-                <img src="/assets/about_tech.png" alt="Software Development"
-                  title="Software Development">
-              </div>
-            </a>
-            <div class="content_box content_box1 content_box2"><a routerLink="softwareDevelopment">
-                <h4> Accessing Google Cloud SQL from Apps Script </h4>
-                <p> Accessing Google Cloud SQL from Apps Script posted Feb 12, 2014, 11:59 PM by Bipin Sasi Connection to
-                  Google Cloud SQL instance From Google Apps Script : Google Apps Script has the ability ...</p>
-              </a>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
+        <div class="amoajon_sec"><a routerLink="appEngineDevelopment">
+            <div class="img_box img_box1">
+              <img src="/assets/about_tech.png" alt="App Engine Development" title="App Engine Development">
             </div>
+          </a>
+          <div class="content_box content_box1 content_box2"><a>
+              <h4> Google Apps Migration for Lotus Notes </h4>
+              <p> Google Apps Migration for Lotus Notes posted Mar 7, 2014, 1:38 AM by Bipin Sasi Google Apps Migration
+                for Lotus Notes (GAMLN) is a native Notes database tool that migrates mail, calendar, ...</p>
+            </a>
           </div>
         </div>
-  
-        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
-          <div class="amoajon_sec"><a routerLink="appEngineDevelopment">
-              <div class="img_box img_box1">
-                <img src="/assets/about_tech.png" alt="App Engine Development"
-                  title="App Engine Development">
-              </div>
-            </a>
-            <div class="content_box content_box1 content_box2"><a>
-                <h4> Google Apps Migration for Lotus Notes </h4>
-                <p> Google Apps Migration for Lotus Notes posted Mar 7, 2014, 1:38 AM by Bipin Sasi Google Apps Migration
-                  for Lotus Notes (GAMLN) is a native Notes database tool that migrates mail, calendar, ...</p>
-              </a>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
+        <div class="amoajon_sec"><a routerLink="sapSolutions">
+            <div class="img_box img_box1">
+              <img src="/assets/about_tech.png" alt="Sap Solutions" title="Sap Solutions">
             </div>
+          </a>
+          <div class="content_box content_box1 content_box2"><a routerLink="sapSolutions">
+              <h4> Increase Your Competitive Advantage Through Your SAP System </h4>
+              <p> If it is analytics that you are seeking, then we can help with high speed analytics delivered by SAP
+                HANA and semantic
+                analysis using SAP BusinessObjects. When it comes to mobility ...</p>
+            </a>
           </div>
         </div>
-  
-        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
-          <div class="amoajon_sec"><a routerLink="sapSolutions">
-              <div class="img_box img_box1">
-                <img src="/assets/about_tech.png" alt="Sap Solutions"
-                  title="Sap Solutions">
-              </div>
-            </a>
-            <div class="content_box content_box1 content_box2"><a routerLink="sapSolutions">
-                <h4> Increase Your Competitive Advantage Through Your SAP System </h4>
-                <p> If it is analytics that you are seeking, then we can help with high speed analytics delivered by SAP
-                  HANA and semantic
-                  analysis using SAP BusinessObjects. When it comes to mobility ...</p>
-              </a>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
+        <div class="amoajon_sec"><a routerLink="softwareDevelopment">
+            <div class="img_box img_box1">
+              <img src="/assets/about_tech.png" alt="SoftwareDevelopment" title="Software Development">
             </div>
+          </a>
+          <div class="content_box content_box1 content_box2"><a routerLink="softwareDevelopment">
+              <h4> How Google Apps Emerged as a Leader ? </h4>
+              <p> How Google Apps Emerged as a Leader ? posted Mar 7, 2014, 1:37 AM by Bipin Sasi [ updated Mar 7,
+                2014, 1:37 AM ] Google Apps has achieved the ripe old age of ...</p>
+            </a>
           </div>
         </div>
-  
-        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
-          <div class="amoajon_sec"><a routerLink="softwareDevelopment">
-              <div class="img_box img_box1">
-                <img src="/assets/about_tech.png" alt="SoftwareDevelopment"
-                  title="Software Development">
-              </div>
-            </a>
-            <div class="content_box content_box1 content_box2"><a routerLink="softwareDevelopment">
-                <h4> How Google Apps Emerged as a Leader ? </h4>
-                <p> How Google Apps Emerged as a Leader ? posted Mar 7, 2014, 1:37 AM by Bipin Sasi [ updated Mar 7,
-                  2014, 1:37 AM ] Google Apps has achieved the ripe old age of ...</p>
-              </a>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
+        <div class="amoajon_sec"><a routerLink="softwareDevelopment">
+            <div class="img_box img_box1">
+              <img src="/assets/struts-2_about_tech.jpg" alt="Software Development" title="SoftwareDevelopment">
             </div>
-          </div>
-        </div>
-  
-        <div class="col-md-4 col-sm-12 col-xs-12 col-lg-4 text-center wow fadeIn   animated" style="visibility: visible;">
-          <div class="amoajon_sec"><a routerLink="softwareDevelopment">
-              <div class="img_box img_box1">
-                <img src="/assets/struts-2_about_tech.jpg" alt="Software Development"
-                  title="SoftwareDevelopment">
-              </div>
+          </a>
+          <div class="content_box content_box1 content_box2"><a routerLink="softwareDevelopment">
+              <h4> Struts Vs Spring </h4>
+              <p> Struts Vs Spring posted Dec 5, 2014, 6:32 PM by Bipin Sasi Submitted by Raghvendra Kumar Spring
+                supports a large number of standards, btw. JSR330, JMS, JSR250, JPA, JSR303, the whole servlet ...</p>
             </a>
-            <div class="content_box content_box1 content_box2"><a routerLink="softwareDevelopment">
-                <h4> Struts Vs Spring </h4>
-                <p> Struts Vs Spring posted Dec 5, 2014, 6:32 PM by Bipin Sasi Submitted by Raghvendra Kumar Spring
-                  supports a large number of standards, btw. JSR330, JMS, JSR250, JPA, JSR303, the whole servlet ...</p>
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
-</section>
+  </div>
+</section> -->
 
 <!-- <section>
     <div class="row" style="width:100%;">

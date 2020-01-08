@@ -1,123 +1,205 @@
 .val_index_page {
-    float: left;
-    width: 100%;
-    position: relative;
-    text-align: center;
-   
-    .banner_index {
-      height: 500px;
-      background-image: url('/assets/banner.jpg');
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      .banner_sec{
-        padding: 120px 0 30px;
-        text-align: center;
-        background: 0 0;
-        float: left;
-        width: 100%;
-          h1 {
-            font-size: 80px;
-            line-height: 90px;
-            color: #fff;
-            font-weight: 700;
-          }
-       }
-    }
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: center;
 
-    .get-support {
-      width: 100%;
-      float: left;
-      margin-top: 50px;
-      background: #0075b0;
-      padding: 50px 0 61px;
-      .here-is-how {
-        color:#fff;
-        font-family:"klinic_slabbook", 'Helvetica', 'Arial', 'sans-serif';
-      }
-      .contact_detail {
-          border: 1px solid #fff;
-          border-radius: 15px;
-          float: left;
-          width: 100%;
-          background: #fff;
-          min-height: 100%;
-        ul {
-          padding: 0px;
-          list-style-type: none;
-          li {
-              margin: 0 0 30px;
-              padding: 0 0 0 0px; 
-              p.address{
-                padding: 15px;
-                color: #0075B0;
-                font-size: 24px;
-                margin: 0;
-                //text-transform: uppercase;
-              }
-          }
-         }
-      }
-    }
-    .map {
+  .banner_index {
+    height: 500px;
+    background-image: url('/assets/banner.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .banner_sec {
+      padding: 120px 0 30px;
+      text-align: center;
+      background: 0 0;
       float: left;
       width: 100%;
-      height: 411px;
+
+      h1 {
+        font-size: 80px;
+        line-height: 90px;
+        color: #fff;
+        font-weight: 700;
+      }
     }
-    
   }
 
-  @media only screen and (min-width: 320px) and (max-width: 767px) {
-    .val_index_page {
-      .banner_index {
-        
-        .banner_sec{
-            h1 {
-              font-size: 30px;
-              line-height: 45px;
-            }
-         }
-      }
+  .get-support {
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+    background: #0075b0;
+    padding: 50px 0 61px;
 
-      .get-support {
-        .map {
-          display: none;
+    .here-is-how {
+      color: #fff;
+      font-family: "klinic_slabbook", 'Helvetica', 'Arial', 'sans-serif';
+    }
+
+    .contact_detail {
+      border: 1px solid #fff;
+      border-radius: 15px;
+      float: left;
+      width: 100%;
+      background: #fff;
+      min-height: 100%;
+
+      ul {
+        padding: 0px;
+        list-style-type: none;
+
+        li {
+          margin: 0 0 30px;
+          padding: 0 0 0 0px;
+
+          p.address {
+            padding: 15px;
+            color: #0075B0;
+            font-size: 24px;
+            margin: 0;
+            //text-transform: uppercase;
+          }
         }
       }
     }
   }
 
+  .map {
+    float: left;
+    width: 100%;
+    height: 411px;
+  }
 
-   // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) { 
+  .contentarea {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    position: relative;
+    z-index: 99;
+    top: -80px;
+    margin: 0 0 -100px;
+
+    .contfrom {
+      width: 60%;
+      height: 296px;
+      float: left;
+      background: #fff;
+    }
+
+    .contdetail {
+      background: #095696;
+      width: 40%;
+      padding: 40px 40px 40px 50px;
+      float: left;
+      height: 100%;
+
+      .detailrow {
+        padding: 0 0 30px;
+        margin: 0 0 30px;
+        border-bottom: 1px solid #09447e;
+        text-align: left;
+
+        h3 {
+          position: relative;
+          font: 15px/25px mulisemibold, sans-serif;
+          text-transform: capitalize;
+          color: #fff;
+          margin: 0 0 30px 40px;
+          border-bottom: 1px solid #ffbc00;
+          width: auto;
+          display: inline-block;
+
+          .fa {
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            color: #0b5298;
+            background: #fff;
+            text-align: center;
+            line-height: 30px;
+            overflow: hidden;
+            position: absolute;
+            left: -40px;
+            top: 0;
+
+          }
+        }
+
+        p {
+          color: #fff;
+          display: block;
+          clear: both;
+          font: 14px/25px muliregular, sans-serif;
+          margin: 0px;
+
+          span {
+            width: 30%;
+            display: inline-block;
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   .val_index_page {
     .banner_index {
-      
-      .banner_sec{
-          h1 {
-            font-size: 60px;
-            line-height: 60px;
-            width: 100%!important;
-            white-space: normal;
-          }
-       }
+
+      .banner_sec {
+        h1 {
+          font-size: 30px;
+          line-height: 45px;
+        }
+      }
+    }
+
+    .get-support {
+      .map {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  .val_index_page {
+    .banner_index {
+
+      .banner_sec {
+        h1 {
+          font-size: 60px;
+          line-height: 60px;
+          width: 100% !important;
+          white-space: normal;
+        }
+      }
     }
   }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px)  { 
+@media (min-width: 992px) and (max-width: 1199px) {
   .val_index_page {
     .banner_index {
-      .banner_sec{
-          h1 {
-            font-size: 60px;
-            line-height: 60px;
-          }
-       }
+      .banner_sec {
+        h1 {
+          font-size: 60px;
+          line-height: 60px;
+        }
+      }
     }
   }
 }
-
- 
-  

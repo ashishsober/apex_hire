@@ -11,7 +11,6 @@ export class managementModal {
 
 export interface management {
     name: string;
-    emailid: string;
     position: string;
     profileImage: string;
     discription: string;

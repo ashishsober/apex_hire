@@ -15,7 +15,22 @@ import * as Rx from "rxjs";
 export class ManagementComponent implements OnInit {
   ManagementEditModalComponent: MatDialogRef<ManagementEditModalComponent>;
   currentUser: user_Data;
-  managementList: management[];
+  managementList: management[] = [
+    {
+      _id: "5c48155dbd6aa594781c6c75",
+      name: "Amrita Gupta",
+      position: "Director",
+      discription: "As Chairman & CEO of VRD NETWORK, Under his leadership VRD NETWORK has broadened its offerings while maintaining a culture of strong innovation. His background uniquely prepares him to lead VRD NETWORK towards technological solutions that focus on users.",
+      profileImage: "assets/user-tie-solid.svg",
+    },
+    {
+      _id: "5c485a5f489298b1bc561d79",
+      discription: "Oversee , implement and manage the Recruitment process of compamy. Responsible for the planning, design and implementation of cost effective employee benefit programs consistent with the Company’s objectives for employees.",
+      position: "Associate Director -  Delivery, Resource Management",
+      profileImage: "assets/user-tie-solid.svg",
+      name: "Munmun Goswami",
+    }
+  ];
   @ViewChild('callAPIDialog') callAPIDialog: TemplateRef<any>;
 
   constructor(public managementService: ManagementService,
@@ -23,13 +38,13 @@ export class ManagementComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.managementService.getManagement().subscribe((data: management[]) => {
-      this.managementList = data;
-    }, (error) => {
-      console.error(error);
-    });
-    this.refreshTable();
-    this.showUpdatedItem();
+    // this.managementService.getManagement().subscribe((data: management[]) => {
+    //   this.managementList = data;
+    // }, (error) => {
+    //   console.error(error);
+    // });
+    //this.refreshTable();
+    //this.showUpdatedItem();
   }
 
   openDialog(id: any): void {
@@ -51,16 +66,16 @@ export class ManagementComponent implements OnInit {
     });
   }
 
-  refreshTable() {
-    this.managementService.currentManagementData.subscribe(
-      (newAddedData: management) => {
-        if (Object.keys(newAddedData).length != 0 &&  this.managementList != undefined) {
-          this.managementList.push(newAddedData);
-        }
+  // refreshTable() {
+  //   this.managementService.currentManagementData.subscribe(
+  //     (newAddedData: management) => {
+  //       if (Object.keys(newAddedData).length != 0 &&  this.managementList != undefined) {
+  //         this.managementList.push(newAddedData);
+  //       }
 
-      }
-    )
-  }
+  //     }
+  //   )
+  // }
 
 
   deleteManage(value: any) {
@@ -74,7 +89,7 @@ export class ManagementComponent implements OnInit {
   }
 
   editManage(item: management) {
-   this.dialog.open(ManagementEditModalComponent, {
+    this.dialog.open(ManagementEditModalComponent, {
       hasBackdrop: false,
       height: '600px',
       width: '400px',
@@ -82,14 +97,14 @@ export class ManagementComponent implements OnInit {
     });
   }
 
-  showUpdatedItem() {
-    this.managementService.updateManagementData.subscribe(
-      (newUpdatedData: management) => {
-        if (Object.keys(newUpdatedData).length != 0 &&  this.managementList != undefined) {
-          let index = this.managementList.findIndex(item => item._id == newUpdatedData._id);
-          this.managementList[index] = newUpdatedData;
-        }
-      }
-    )
-  }
+  // showUpdatedItem() {
+  //   this.managementService.updateManagementData.subscribe(
+  //     (newUpdatedData: management) => {
+  //       if (Object.keys(newUpdatedData).length != 0 &&  this.managementList != undefined) {
+  //         let index = this.managementList.findIndex(item => item._id == newUpdatedData._id);
+  //         this.managementList[index] = newUpdatedData;
+  //       }
+  //     }
+  //   )
+  // }
 }
