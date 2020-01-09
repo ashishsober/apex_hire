@@ -20,16 +20,11 @@
         <li class="menu_arrow"><a (click)="displayServiceMenu = !displayServiceMenu" title="Services">Services</a>
           <div class="sub_menu_new srv-list srv-list-for-small-device-services" [ngClass]="{'display_block':displayServiceMenu}">
             <ul class="sub-menu-list services">
-              <li (click)="navigateTo('sapSolutions')" class="first" title="Contract Staffing" class="sap-solutions">
-                    <img src="../assets/cubes-solid.svg" />Contract Staffing</li>
-              <li (click)="navigateTo('softwareDevelopment')" class="first" title="Permanent Staffing" class="workflow">
-                <img src="../assets/statistics.svg" />Permanent Staffing</li>
-              <li (click)="navigateTo('appEngineDevelopment')" class="first" title="Recruitment Process Outsourcing" class="app-Engine-Development">
-                <img src="../assets/cloud-solid.svg" />Engg. Services Recruitment</li>
-              <li (click)="navigateTo('iot')" class="first" title="Professional Services" class="iot">
-                <img src="../assets/ioxhost-brands.svg" />IOT & Digital</li>
-              <li (click)="navigateTo('networkSecurity')" class="first" title="Apps Integration" class="apps-integration">
-                    <img src="../assets/layer-group-solid.svg" />PLM</li>
+              <li (click)="navigateTo('sapSolutions')" class="first" title="Contract Staffing" class="sap-solutions">Contract Staffing</li>
+              <li (click)="navigateTo('softwareDevelopment')" class="first" title="Permanent Staffing" class="workflow">Permanent Staffing</li>
+              <li (click)="navigateTo('appEngineDevelopment')" class="first" title="Recruitment Process Outsourcing" class="app-Engine-Development">Engg. Services Recruitment</li>
+              <li (click)="navigateTo('iot')" class="first" title="Professional Services" class="iot">IOT & Digital</li>
+              <li (click)="navigateTo('networkSecurity')" class="first" title="Apps Integration" class="apps-integration">PLM</li>
             </ul>
           </div>
         </li>
@@ -37,10 +32,8 @@
         <li class="menu_arrow"><a (click)="displayCompanyMenu = !displayCompanyMenu" title="Company" class="company_a">About</a>
           <div class="sub_menu_new srv-list srv-list-for-small-device-about" [ngClass]="{'display_block':displayCompanyMenu}">
             <ul class="sub-menu-list about_sub">
-              <li (click)="navigateTo('')" class="first" title="About US" class="about-us">
-                <img src="../assets/book-open-solid.svg" />What Drives Us</li>
-              <li (click)="navigateTo('management')" class="first" title="Management" class="management">
-                <img src="../assets/users-solid.svg" />Leadership</li>
+              <li (click)="navigateTo('')" class="first" title="About US" class="about-us">What Drives Us</li>
+              <li (click)="navigateTo('management')" class="first" title="Management" class="management">Leadership</li>
             </ul>
           </div>
         </li>

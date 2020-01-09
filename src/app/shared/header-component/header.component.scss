@@ -90,7 +90,7 @@
             &.about_sub {
               width: 230px;
               right: -30%;
-              height: 133px;
+              height: 90px;
             }
 
             &.about_sub:before {
@@ -101,7 +101,7 @@
             &.services {
               width: 315px;
               right: -70%;
-              height: 330px;
+              height: 225px;
             }
 
             &.services:before {
@@ -119,9 +119,10 @@
               border-bottom: 1px solid #ddd;
               margin: 0;
               background-color: transparent;
-              padding: 13px 0 12px 25px;
+              padding: 10px 0 10px 25px;
               cursor: pointer;
-              font-family: 'SCSans-Light';
+              //font: 16px/20px muliregular,sans-serif;
+              font-family: 'sans-serif';
               font-size: 16px;
               top: -11px;
 
@@ -138,27 +139,26 @@
 
             li:hover {
               &.app-Engine-Development {
-                background-color: #ffd740;
-                color: black;
+                background-color: #2e4365;
               }
 
               &.iot {
-                background-color: #d11e9b;
+                background-color: #2e4365;
               }
 
               &.apps-integration {
-                background-color: rgb(238, 74, 74);
+                background-color: #2e4365;
               }
 
               &.sap-solutions {
-                background-color: #41b983;
+                background-color: #2e4365;
               }
 
               &.workflow {
-                background-color: #9493da;
+                background-color: #2e4365;
               }
 
-              background-color: rgba(0, 0, 0, 0.445);
+              background-color: #2e4365;
               color: white;
             }
           }
