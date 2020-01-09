@@ -2,7 +2,8 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-lg-3 col-md-2" [ngClass]="{'right50':right50}">
         <a (click)="navigateTo('')" title="APEX HIRE USA">
-            <label class="logo">APEX HIRE USA</label>
+            <label class="logo" [hidden]="!logoHideDark"><img src="../../../assets/logo_white.svg" style="width:100%;"/></label>
+            <label class="logo" [hidden]="logoHideDark"><img src="../../../assets/logo_dark.svg" style="width:100%;"/></label>
         </a>
       <span class="mob_icon2" (click)="sidebar('open')" *ngIf="!displayBlock"></span>
       <span class="mob_cross" (click)="sidebar('close')" *ngIf="displayBlock"></span>

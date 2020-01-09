@@ -18,6 +18,7 @@ export class HeaderComponent implements OnInit {
   displayCompanyMenu: boolean = false;
   displayServiceMenu: boolean = false;
   displayRecruitMenu: boolean = false;
+  logoHideDark:boolean= true;
   @Output() right50Event = new EventEmitter<boolean>();
   constructor(private router: Router, private userService: UserService) { }
   currentUser: user_Data;
@@ -35,9 +36,11 @@ export class HeaderComponent implements OnInit {
         if(value.url === '/management'){
           this.bannerColorToBlack = true;
           this.positionFixed = true;
+          this.logoHideDark = false;
         } else {
           this.bannerColorToBlack = false;
           this.positionFixed = false;
+          this.logoHideDark = true;
         }
       }
     })
@@ -50,15 +53,19 @@ export class HeaderComponent implements OnInit {
     if (number > 20 && window.outerHeight > 375) {
       this.bannerColorToBlack = true;
       this.positionFixed = true;
+      this.logoHideDark = false;
     } else if (currentUrl === '/management'){
       this.bannerColorToBlack = true;
       this.positionFixed = true;
+      this.logoHideDark = false;
     } else if (window.outerHeight <= 375) {
       this.bannerColorToBlack = false;
       this.positionFixed = false;
+      this.logoHideDark = true;
     }  else {
       this.bannerColorToBlack = false;
       this.positionFixed = true;
+      this.logoHideDark = true;
     }
   }
 
