@@ -1,6 +1,6 @@
-import { Component, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { HostListener } from "@angular/core";
-import { Router } from '@angular/router'
+import { Router, NavigationEnd } from '@angular/router'
 import { UserService } from '../user.service';
 import { user_Data } from '../userData.modal';
 
@@ -29,19 +29,34 @@ export class HeaderComponent implements OnInit {
           this.currentUser = userData;
         
       }
-    )
+    );
+    this.router.events.subscribe((value) =>{
+      if(value instanceof NavigationEnd){
+        if(value.url === '/management'){
+          this.bannerColorToBlack = true;
+          this.positionFixed = true;
+        } else {
+          this.bannerColorToBlack = false;
+          this.positionFixed = false;
+        }
+      }
+    })
   }
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
     const number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const currentUrl = this.router.url;
     if (number > 20 && window.outerHeight > 375) {
+      this.bannerColorToBlack = true;
+      this.positionFixed = true;
+    } else if (currentUrl === '/management'){
       this.bannerColorToBlack = true;
       this.positionFixed = true;
     } else if (window.outerHeight <= 375) {
       this.bannerColorToBlack = false;
       this.positionFixed = false;
-    } else {
+    }  else {
       this.bannerColorToBlack = false;
       this.positionFixed = true;
     }

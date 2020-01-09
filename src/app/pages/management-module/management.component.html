@@ -1,70 +1,49 @@
 <section class="val_index_page">
-        
-          <div class="banner_index">
-               
-                <div class="banner_sec">
-                    <div class="container">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 intro">
-                                    <!-- <p>As VRD envisions to be one of the most preferred partners for the IT/ITeS solutions, it assures business value by coalescing operational excellence and deep functional knowledge of the leadership. Decades of experience our team boasts in the arena has given us the gumption to optimize the technical and human interactions, enriching our client’s business.</p> -->
-                                </div>
-                            </div>
+
+    <div class="banner_index">
+
+        <div class="banner_sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 our_leadership">
+                        <h1><span>Our Leadership</span></h1>
                     </div>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 our_leadership">
-                            <h1><span>Our Leadership</span></h1>
-                        </div>
-                      </div>
-                    </div>
-                </div> 
-                
-                <div class="container">
-                        <div class="manag-board">
-                                <div class="container">
-                                    <div class="row" style="margin-bottom: 15px;padding-left: 18px;" *appShowAuthed>
-                                        <button class="btn btn-primary" (click)="addManagement()">ADD</button>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12" *ngFor="let item of managementList">
-                                            <div class="card">
-                                                    <ul>
-                                                        <div *appShowAuthed>
-                                                                <a style="position: absolute;cursor: pointer;right: 25px;" (click)="editManage(item)"><i class="far fa-pen">&#9998;</i></a>
-                                                                <a style="position: absolute;cursor: pointer;right: 6px;" (click)="openDialog(item._id)"><i class="fa fa-times"></i></a>    
-                                                        </div>
-                                                            <li class="profile">
-                                                                <div class="profile-pic">
-                                                                    <img [src]="item.profileImage" style="background-size:cover;display:inline-block;width: 107px;height: 107px;background-position: center;"/>
-                                                                </div>
-                                                                <div class="valign">
-                                                                    <h4>{{ item.name }}</h4>
-                                                                    <h5>{{ item.position }}</h5>
-                                                                </div>
-                                                            </li>
-                                                            <li class="descs">
-                                                                    {{item.discription}}
-                                                            </li>
-                                                            <p *ngIf="item.emailid"><i class="fa fa-envelope"></i> : {{item.emailid}}</p>
-                                                    </ul>
-                    
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                         </div>
                 </div>
-          </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="manag-board">
+                <div class="container">
+                    <div class="row" style="margin-bottom: 15px;padding-left: 18px;" *appShowAuthed>
+                        <button class="btn btn-primary" (click)="addManagement()">ADD</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12" *ngFor="let item of managementList">
+                            <div class="review-box">
+                                <!-- <div *appShowAuthed>
+                                                            <a style="position: absolute;cursor: pointer;right: 25px;" (click)="editManage(item)"><i class="far fa-pen">&#9998;</i></a>
+                                                            <a style="position: absolute;cursor: pointer;right: 6px;" (click)="openDialog(item._id)"><i class="fa fa-times"></i></a>    
+                                                    </div> -->
+                                <span class="dpsec dp5"></span>
+                                <p>{{item.discription}}</p>
+                                <h4>{{ item.name }} </h4><small>{{ item.position }}</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <ng-template #callAPIDialog>
     <div mat-dialog-content>
-       <h2 matDialogTitle>Are you sure you want to delete</h2>
+        <h2 matDialogTitle>Are you sure you want to delete</h2>
     </div>
     <mat-dialog-actions align="end">
         <button mat-button matDialogClose="no" mat-button> No</button>
         <button mat-button matDialogClose="yes" mat-raised-button mat-button>Yes</button>
     </mat-dialog-actions>
 </ng-template>
-      
