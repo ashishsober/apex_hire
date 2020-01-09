@@ -6,9 +6,28 @@
   width: 100%;
   z-index: 999;
   transition: all 0.2s ease-in-out;
-
   &.banner-color {
-    background-color: #212529;
+    background-color: #ffffff;
+    box-shadow: 10px 0 10px rgba(0,0,0,.9);
+    .menu_new{
+      li {
+        &.menu_arrow a{
+          color: #000;
+          &:hover{
+            color: #2e4365 !important;
+          }
+        }
+        &.no_arrow a{
+          color:  #000;
+          &:hover{
+            color: #2e4365;
+          }
+          &.contact_a {
+            color: #000;
+          }
+        }
+      }
+    }
   }
 
   a {
@@ -58,12 +77,16 @@
         a {
           background: url(../../../assets/ico_arrow_down.svg) right 12px center no-repeat rgba(0, 0, 0, 0);
           background-size: 11%;
-          color: #ffffffc2;
+          color: #ffffff;
           display: inline-block;
           padding: 20px 38px 20px 12px;
           text-decoration: none;
           cursor: pointer;
           font-size: 18px;
+
+          &:hover {
+            color: #fff;
+          }
         }
 
         .sub_menu_new {
@@ -180,12 +203,6 @@
       }
 
       &.menu_arrow:hover {
-        a {
-          //transition: all .25s ease-out;
-          // background-color:#008000;
-          color: #fff;
-        }
-
         .sub_menu_new {
           //transition: all .25s ease-in;
           display: block;
@@ -196,13 +213,19 @@
       &.no_arrow {
         a {
           background-size: 11%;
-          color: #ffffffc2;
+          color: #fff;
           display: inline-block;
           padding: 20px 12px 20px 12px;
           text-decoration: none;
           cursor: pointer;
           font-size: 18px;
-
+          
+          &:hover {
+            transition: all .25s ease-out;
+            //background-color: #07b8de;
+            color: #fff;
+          }
+          
           &.contact_a {
             transition: all 0.2s ease-in-out;
             background: rgba(0, 0, 0, 0);
@@ -212,7 +235,7 @@
             -moz-border-radius: 5px;
             -ms-border-radius: 5px;
             -o-border-radius: 5px;
-            color: #ffffffc2;
+            color: #ffffff;
             font-size: 18px;
             line-height: 36px;
             margin: 15px 14px;
@@ -224,16 +247,16 @@
             &:hover {
               background-color: #ffd740;
               border: 1px solid #ffd740;
-              color: black;
+              color: #2e4365;
             }
           }
         }
 
-        a:hover {
-          transition: all .25s ease-out;
-          //background-color: #07b8de;
-          color: #fff;
-        }
+        // a:hover {
+        //   transition: all .25s ease-out;
+        //   //background-color: #07b8de;
+        //   color: #fff;
+        // }
       }
 
 
