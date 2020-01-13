@@ -31,11 +31,16 @@
         <li class="menu_arrow"><a (click)="displayServiceMenu = !displayServiceMenu" title="Services">SERVICES</a>
           <div class="sub_menu_new srv-list srv-list-for-small-device-services" [ngClass]="{'display_block':displayServiceMenu}">
             <ul class="sub-menu-list services">
-              <li (click)="navigateTo('sapSolutions')" class="first" title="Contract Staffing" class="sap-solutions">Contract Staffing</li>
               <li (click)="navigateTo('softwareDevelopment')" class="first" title="Permanent Staffing" class="workflow">Permanent Staffing</li>
-              <li (click)="navigateTo('appEngineDevelopment')" class="first" title="Recruitment Process Outsourcing" class="app-Engine-Development">Engg. Services Recruitment</li>
+              <!-- <ul class="lavel2">
+                  <li><a href="web-application-development" title="Web App Development">Web App Development</a></li>
+                  <li><a href="mobile-application-development" title="Mobile App Development">Mobile App Development</a></li>
+                  <li><a href="cross-platform-app-development-services" title="Cross-Platform Development">Cross-Platform Development</a></li>
+              </ul> -->
+              <li (click)="navigateTo('appEngineDevelopment')" class="first" title="Recruitment Process Outsourcing" class="app-Engine-Development">Engineering Services</li>
               <li (click)="navigateTo('iot')" class="first" title="Professional Services" class="iot">IOT & Digital</li>
               <li (click)="navigateTo('networkSecurity')" class="first" title="Apps Integration" class="apps-integration">PLM</li>
+              <li (click)="navigateTo('sapSolutions')" class="first" title="Contract Staffing" class="sap-solutions">Contract Staffing</li>
             </ul>
           </div>
         </li>

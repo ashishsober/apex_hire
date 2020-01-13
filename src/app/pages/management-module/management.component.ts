@@ -25,7 +25,7 @@ export class ManagementComponent implements OnInit {
     },
     {
       _id: "5c485a5f489298b1bc561d79",
-      discription: "Oversee , implement and manage the Recruitment process of compamy. Responsible for the planning, design and implementation of cost effective employee benefit programs consistent with the Company’s objectives for employees.",
+      discription: "Oversee , implement and manage the recruitment process of company. Responsible for the planning, design and implementation of cost effective employee benefit programs consistent with the Company’s objectives for employees.",
       position: "Partner at Apex Hire USA.",
       profileImage: "assets/partner2.jpg",
       name: "Munmun Goswami",
