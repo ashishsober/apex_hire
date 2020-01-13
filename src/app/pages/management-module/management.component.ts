@@ -20,7 +20,7 @@ export class ManagementComponent implements OnInit {
       _id: "5c48155dbd6aa594781c6c75",
       name: "Amrita Gupta",
       position: "Partner at Apex Hire USA.",
-      discription: "As Chairman & CEO of APEX HIRE, Under her leadership APEX HIRE has broadened its offerings while maintaining a culture of strong innovation. Her background uniquely prepares her to lead APEX HIRE towards technological solutions that focus on users.",
+      discription: "Overseeing all operations and business activities to ensure they produce the desired results and are consistent with the overall strategy and mission",
       profileImage: "assets/amrita_gupta.jpeg",
     },
     {

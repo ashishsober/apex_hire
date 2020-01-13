@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'appEngineDevelopment', loadChildren:'./pages/app-engine-development-module/app-engine-development.module#AppEngineDevelopementModule' },
   { path: 'sapSolutions', loadChildren:'./pages/sap-solutions-module/sap-solutions.module#SapSolutionModule' },
   { path: 'softwareDevelopment', loadChildren:'./pages/software-development-module/software-development.module#SoftwareDevelopmentModule' },
-  { path: 'iot', loadChildren:'./pages/iot-module/iot.module#IOTModule' }
+  { path: 'iot', loadChildren:'./pages/iot-module/iot.module#IOTModule' },
+  {path:'vision',loadChildren:'./pages/visionAndMission/vision.module#VisionModule'}
   // { path: '', redirectTo: '', pathMatch: 'full' },
   // { path: '**', redirectTo: '', pathMatch: 'full' }
 ];

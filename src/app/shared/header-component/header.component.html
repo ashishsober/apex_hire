@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-lg-3 col-md-2" [ngClass]="{'right50':right50}">
         <a (click)="navigateTo('')" title="APEX HIRE USA">
-            <label class="logo" [hidden]="!logoHideDark"><img src="../../../assets/logo_white.svg" style="width:100%;"/></label>
-            <label class="logo" [hidden]="logoHideDark"><img src="../../../assets/logo_dark.svg" style="width:100%;"/></label>
+            <label class="logo" [hidden]="!logoHideDark"><img src="../../../assets/new_logo_white.svg" style="width:100%;"/></label>
+            <label class="logo" [hidden]="logoHideDark"><img src="../../../assets/new_logo_dark.svg" style="width:100%;"/></label>
         </a>
       <span class="mob_icon2" (click)="sidebar('open')" *ngIf="!displayBlock"></span>
       <span class="mob_cross" (click)="sidebar('close')" *ngIf="displayBlock"></span>
@@ -18,6 +18,16 @@
             </a>
             
         </li>
+        <li class="menu_arrow"><a (click)="displayCompanyMenu = !displayCompanyMenu" title="Company" class="company_a">ABOUT</a>
+          <div class="sub_menu_new srv-list srv-list-for-small-device-about" [ngClass]="{'display_block':displayCompanyMenu}">
+            <ul class="sub-menu-list about_sub">
+              <li (click)="navigateTo('vision')" class="first" title="About US" class="about-us">Vision & Mission</li>
+              <li (click)="navigateTo('')" class="first" title="About US" class="about-us">What Drives Us</li>
+              <li (click)="navigateTo('management')" class="first" title="Management" class="management">Leadership</li>
+            </ul>
+          </div>
+        </li>
+        
         <li class="menu_arrow"><a (click)="displayServiceMenu = !displayServiceMenu" title="Services">SERVICES</a>
           <div class="sub_menu_new srv-list srv-list-for-small-device-services" [ngClass]="{'display_block':displayServiceMenu}">
             <ul class="sub-menu-list services">
@@ -30,14 +40,6 @@
           </div>
         </li>
         
-        <li class="menu_arrow"><a (click)="displayCompanyMenu = !displayCompanyMenu" title="Company" class="company_a">ABOUT</a>
-          <div class="sub_menu_new srv-list srv-list-for-small-device-about" [ngClass]="{'display_block':displayCompanyMenu}">
-            <ul class="sub-menu-list about_sub">
-              <li (click)="navigateTo('')" class="first" title="About US" class="about-us">What Drives Us</li>
-              <li (click)="navigateTo('management')" class="first" title="Management" class="management">Leadership</li>
-            </ul>
-          </div>
-        </li>
         <li class="no_arrow"><a (click)="navigateTo('jobBoard')" title="job_board_a" class="Workflow">JOB BOARD</a></li>
         <li class="no_arrow"><a (click)="navigateTo('contact')" title="Contact" class="contact_a">Contact Us</a></li>
         <!-- <li>

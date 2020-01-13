@@ -24,11 +24,9 @@
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:30px;text-align: left;"
             *ngFor="let item of jobData">
-            <div *appShowAuthed>
-              <a style="position: absolute;cursor: pointer;right: 45px;" (click)="editJob(item)"><i
-                  class="far fa-pen">&#9998;</i></a>
-              <a style="position: absolute;cursor: pointer;right: 25px;" (click)="openDialog(item._id)"><i
-                  class="fa fa-times"></i></a>
+            <div>
+              <a style="position: absolute;cursor: pointer;right: 25px;top: 10px;" href="mailto:hr@apexhireusa.com">
+                  <button class="btn btn-primary">Apply Now</button></a>
             </div>
             <div class="job_detail">
               <ul>
@@ -44,6 +42,7 @@
                   </ul>
                 </li>
               </ul>
+              <span><small>Posted By : 8 January 2020</small></span>
             </div>
           </div>
 
