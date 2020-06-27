@@ -6,22 +6,28 @@
   width: 100%;
   z-index: 999;
   transition: all 0.2s ease-in-out;
+
   &.banner-color {
     background-color: #ffffff;
-    box-shadow: 10px 0 10px rgba(0,0,0,.9);
-    .menu_new{
+    box-shadow: 10px 0 10px rgba(0, 0, 0, .9);
+
+    .menu_new {
       li {
-        &.menu_arrow a{
+        &.menu_arrow a {
           color: #000;
-          &:hover{
+
+          &:hover {
             color: #2e4365 !important;
           }
         }
-        &.no_arrow a{
-          color:  #000;
-          &:hover{
+
+        &.no_arrow a {
+          color: #000;
+
+          &:hover {
             color: #2e4365;
           }
+
           &.contact_a {
             color: #000;
           }
@@ -31,11 +37,11 @@
   }
 
   a {
-    .home{
+    .home {
       font-size: 26px;
       color: wheat;
     }
-   
+
     .logo {
       margin: 14px 0;
       // width: 206px;
@@ -67,7 +73,7 @@
       letter-spacing: 1px;
       font-size: 21px;
       transition: all 0.2s ease-in-out;
-      font-family: 'Noto-Sans';
+      //font-family: 'sans-serif';
 
       &.only_for_mobile {
         display: none;
@@ -122,13 +128,13 @@
             }
 
             &.services {
-              width: 315px;
-              right: -70%;
-              height: 225px;
+              width: 260px;
+              right: -50%;
+              height: 90px;
             }
 
             &.services:before {
-              left: 142px;
+              left: 100px;
               top: -12px;
             }
 
@@ -145,7 +151,7 @@
               padding: 10px 0 10px 25px;
               cursor: pointer;
               //font: 16px/20px muliregular,sans-serif;
-              font-family: 'sans-serif';
+              //font-family: 'sans-serif';
               font-size: 16px;
               top: -11px;
 
@@ -179,10 +185,28 @@
 
               &.workflow {
                 background-color: #2e4365;
+
+                ul.lavel2 {
+                  display: block !important;
+                  color: #000;
+                }
               }
 
               background-color: #2e4365;
               color: white;
+            }
+
+            ul.lavel2 {
+              display: none;
+              position: absolute;
+              left: 225px;
+              top: 5px;
+              background-color: white;
+              padding: 15px 5px;
+              border-left: 2px solid #ffbc00;
+              width: 100%;
+              z-index: 9;
+              height: 139px;
             }
           }
 
@@ -219,13 +243,13 @@
           text-decoration: none;
           cursor: pointer;
           font-size: 18px;
-          
+
           &:hover {
             transition: all .25s ease-out;
             //background-color: #07b8de;
             color: #fff;
           }
-          
+
           &.contact_a {
             transition: all 0.2s ease-in-out;
             background: rgba(0, 0, 0, 0);
@@ -507,12 +531,12 @@
       .home {
         display: none;
       }
-      
+
       .logo {
         font-size: 12px !important;
       }
     }
-    
+
 
     .menu_new {
       li {

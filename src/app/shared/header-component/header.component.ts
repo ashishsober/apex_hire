@@ -84,9 +84,10 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  navigateTo(state: any) {
+  navigateTo(event:any,state: any) {
     this.displayBlock = false;
     this.right50 = false;   //emit from here
+    event.stopPropagation();
     this.right50Event.emit(this.right50);
     this.router.navigate([state]);
   }

@@ -18,7 +18,7 @@ export class ManagementComponent implements OnInit {
   managementList: management[] = [
     {
       _id: "5c48155dbd6aa594781c6c75",
-      name: "Amrita Gupta",
+      name: "Amrita",
       position: "Partner at Apex Hire USA.",
       discription: "Overseeing all operations and business activities to ensure they produce the desired results and are consistent with the overall strategy and mission",
       profileImage: "assets/amrita_gupta.jpeg",
@@ -28,7 +28,7 @@ export class ManagementComponent implements OnInit {
       discription: "Oversee , implement and manage the recruitment process of company. Responsible for the planning, design and implementation of cost effective employee benefit programs consistent with the Company’s objectives for employees.",
       position: "Partner at Apex Hire USA.",
       profileImage: "assets/partner2.jpg",
-      name: "Munmun Goswami",
+      name: "Munmun",
     }
   ];
   @ViewChild('callAPIDialog') callAPIDialog: TemplateRef<any>;

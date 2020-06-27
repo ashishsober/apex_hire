@@ -10,7 +10,7 @@ export class AboutUsComponent implements OnInit, OnDestroy {
     {img: "assets/front-images4.jpg",text:''},
     {img: "assets/front-images.png",text:'Software-Development'},
     {img: "assets/front-images2.jpg",text:'Search engine optimization'},
-    {img: "assets/front-images3.jpg",text:'Responsive websites'}
+    {img: "assets/new_banner.png",text:'Responsive websites'}
   ];
 
   slides = [

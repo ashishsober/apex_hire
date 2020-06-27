@@ -51,46 +51,6 @@ export class JobBoardComponent implements OnInit {
           "requirement": "Excellent Communication Skills"
         }
       ]
-    },
-    {
-      "_id": "5cf79cda8e0c402597edf71f",
-      "experience": "2+ years",
-      "jobId": "APXMDG001",
-      "jobType": "Permanent",
-      "location": "Philadelphia",
-      "title": "IOT Developers",
-      "requirements": [
-        {
-          "requirement": "Design and Develop Entity Types in SAP MDG "
-        },
-        {
-          "requirement": "Design and Develop Multi-Level Workflows in SAP "
-        },
-        {
-          "requirement": "Configure SAP MDG UI"
-        },
-        {
-          "requirement": "Configure SAP MDG Business Rules Framework Plus (BRF+)"
-        },
-        {
-          "requirement": "Understand SAP Master Data Elements (Customer, Vendor, Material, and Org Structure Elements) "
-        },
-        {
-          "requirement": "Functional skills - SAP MDG Configuration , SAP Business Workflow"
-        },
-        {
-          "requirement": "Should have minimum 1 full SAP MDG roll out experience in MDG"
-        },
-        {
-          "requirement": "Have a good understanding in Material master, Customer master, Supplier master and Financial master"
-        },
-        {
-          "requirement": "Should have experience in integrating MDG with other satellite systems for deployment"
-        },
-        {
-          "requirement": "Excellent Communication Skills"
-        }
-      ]
     }
   ];
   jobBoardEditModalComponent: MatDialogRef<JobBoardEditModalComponent>;
